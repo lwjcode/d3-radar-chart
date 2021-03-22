@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import D3RadarChart from './src';
+import D3RadarChart from '../src';
 import './style.less';
 
 function getColor(idx) {
@@ -15,7 +15,8 @@ function getColor(idx) {
 }
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
+    super(props);
     this.chart = null;
     this.chartRef = null;
   }
@@ -27,8 +28,11 @@ class App extends Component {
   initChart = () => {
     const options = {
       chart: {
-        width: 150,
+        level: 5,
+        fillColor: '#a6e3e9',
+        strokeColor: '#fff',
         container: this.chartRef,
+        width: 300,
       },
       legend: [
         {
@@ -43,13 +47,13 @@ class App extends Component {
       series: [
         {
           name: '苹果',
-          fileds: ['喜爱度', '好用指数'],
-          value: [80, 50],
+          fileds: ['喜爱度', '好用指数', '美观指数'],
+          value: [80, 50, 60],
         },
         {
           name: '华为',
-          fileds: ['喜爱度', '好用指数'],
-          value: [80, 40],
+          fileds: ['喜爱度', '好用指数', '美观指数'],
+          value: [70, 40, 30],
         },
       ],
     };
@@ -57,7 +61,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="simple-radar-chart" style={{ margin: 50 }}>
+      <div className="simple-radar-chart" style={{ margin: 50, width: 150 }}>
         <svg ref={(r) => this.chartRef = r}></svg>
       </div>
     )
