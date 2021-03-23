@@ -16,25 +16,13 @@ class LineChart extends React.Component {
   }
 
   componentDidMount() {
-    const colors = [
-      '#4fa72a',
-      '#e64d30',
-      '#224bde',
-      '#079de4',
-      '#c19801',
-      '#d10ab0',
-      '#627080',
-      '#7900d6',
-      '#659e67',
-      '#029faf',
-      '#ab5656',
-      '#5c799c',
-    ];
-    // chart、series为必选参数，其他非必选
     const options = {
       chart: {
-        width: 150,
+        level: 5,
+        fillColor: '#a6e3e9', // 网格填充色
+        strokeColor: '#fff', // 网格边线
         container: this.chartRef,
+        width: 300, // 非必须，不传是默认父容器的大小
       },
       legend: [
         {
@@ -49,13 +37,13 @@ class LineChart extends React.Component {
       series: [
         {
           name: '苹果',
-          fileds: ['喜爱度', '好用指数'],
-          value: [80, 50],
+          fileds: ['喜爱度', '好用指数', '美观指数'],
+          value: [80, 50, 60],
         },
         {
           name: '华为',
-          fileds: ['喜爱度', '好用指数'],
-          value: [80, 40],
+          fileds: ['喜爱度', '好用指数', '美观指数'],
+          value: [70, 40, 30],
         },
       ],
     };
