@@ -1,0 +1,29 @@
+.webs polygon {
+  fill-opacity: 0.5;
+  stroke-dasharray: 3 3;
+}
+.areas polygon {
+  fill-opacity: 0.5;
+  stroke-width: 3;
+}
+.areas circle {
+  fill: white;
+  stroke-width: 3;
+}
+.radar-tooltip {
+  position: absolute;
+  border-style: solid;
+  white-space: nowrap;
+  z-index: 9999999;
+  transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  background-color: rgba(50, 50, 50, 0.7);
+  border-width: 0px;
+  border-color: #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  font: 12px/18px sans-serif;
+  padding: 5px;
+}
+
+
+/*# sourceMappingURL=index.css.map*/
