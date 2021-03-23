@@ -61,7 +61,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="simple-radar-chart" style={{ margin: 50, width: 150 }}>
+      <div className="simple-radar-chart">
         <svg ref={(r) => this.chartRef = r}></svg>
       </div>
     )
