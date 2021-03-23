@@ -1,4 +1,4 @@
-# d3-line-chart
+# d3-radar-chart
 
 d3封装的雷达图
 
